@@ -72,5 +72,6 @@ This is an example of what your command should look like after you replace the f
 
 ![Example Output](https://github.com/user-attachments/assets/55858f82-f29d-43d1-b153-b811ed9a7542)
 
+![EXample Output 2](https://github.com/user-attachments/assets/b91c7e52-0622-453c-9dcd-43047fcf1792)
 
 [View a video explanation here!!](video link)
