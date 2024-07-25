@@ -53,7 +53,7 @@ Neural networks are a class of machine learning algorithms inspired by the struc
 
 7. Run this command to download the skin cancer classification model.
 
-`wget  https://github.com/isamarquezg/skincancer`
+`git clone --recursive  https://github.com/isamarquezg/skincancer`
 
 8. cd back to 'classification' directory
 
