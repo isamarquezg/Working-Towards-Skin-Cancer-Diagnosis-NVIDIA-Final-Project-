@@ -28,39 +28,48 @@ Neural networks are a class of machine learning algorithms inspired by the struc
 
 ## Running this project
 1. First, begin by setting up an SSH conection with your Jetson Nano (with jetson-inference configured) and opening a functioning terminal.
+
+2. Run this commands to update your installer. You will be prompted to enter your password.
+
+`sudo apt-get update`
+
+3. Run this command to install cmake
+
+`sudo apt-get install git cmake`
   
-2. Use cd commands to change directories until you are in your jetson-inference/python/training/classification/data
+4. Use cd commands to change directories until you are in your jetson-inference/python/training/classification/data
    
 `cd jetson-inference/python/training/classification/data`
 
-3. Run this command to download the image dataset.
 
-`wget  https://github.com/isamarquezg/Working-Towards-Skin-Cancer-Diagnosis-NVIDIA-Final-Project-/tree/main/skincancerdata`
+5. Run this command to download the image dataset.
 
-4. cd back to 'classification' directory, and then cd into the 'models' directory 
+`git clone --recursive https://github.com/isamarquezg/skincancerdata`
+
+6. cd back to 'classification' directory, and then cd into the 'models' directory 
 
 `cd ..`
 `cd models`
 
-5. Run this command to download the skin cancer classification model.
+7. Run this command to download the skin cancer classification model.
 
-`wget  https://github.com/isamarquezg/Working-Towards-Skin-Cancer-Diagnosis-NVIDIA-Final-Project-/tree/main/skincancer`
+`wget  https://github.com/isamarquezg/skincancer`
 
-6. cd back to 'classification' directory
+8. cd back to 'classification' directory
 
 `cd ..`
 
-7. Use the following command to make sure that the model is on the nano. You should see a file called resnet18.onnx.
+9. Use the following command to make sure that the model is on the nano. You should see a file called resnet18.onnx.
 
  `ls models/skincancer/` 
 
-8. Set the NET and DATASET variables by running each of these commands separately
+10. Set the NET and DATASET variables by running each of these commands separately
 
 `NET=models/skincancer`
 
 `DATASET=data/skincancerdata`
 
-9. Run this command try the model and see how it operates on an image from the test folder!! Change 'NAME HERE' to name your output file and rename 'NAME OF CATEGORY' and 'IMAGE NAME'
+11. Run this command try the model and see how it operates on an image from the test folder!! Change 'NAME HERE' to name your output file and rename 'NAME OF CATEGORY' and 'IMAGE NAME'
     
 `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/NAME OF CATEGORY/IMAGE NAME .jpg $DATASET/output/NAME OUTPUT.jpg`
 
@@ -68,7 +77,7 @@ This is an example of what your command should look like after you replace the f
 
 `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/vasc/vasc7.jpg $DATASET/output/test1.jpg`
 
-10. Look at your results by opening the image that just saved in the 'output' folder! This folder should be located in jetson-inference/python/training/classification/data/skincancerdata/output
+12. Look at your results by opening the image that just saved in the 'output' folder! This folder should be located in jetson-inference/python/training/classification/data/skincancerdata/output
 
 ![Example Output](https://github.com/user-attachments/assets/55858f82-f29d-43d1-b153-b811ed9a7542)
 
