@@ -1,8 +1,8 @@
-# Working Towards Skin Cancer Diagnosis (NVIDIA Final Project)
+# Working Towards Skin Cancer Diagnosis 
 
 [View a video explanation here!!](https://www.youtube.com/watch?v=hO6h4jgOnoA)
 
-For my final project, I decided to utilize RevNet18 and image detection techniques to classify seven different types of skin cancer. The dataset I employed for this project is the HAM10000 ("Human Against Machine with 10000 training images") dataset extracted from Kaggle (See link below), which addresses the challenges posed by the small size and lack of diversity in available dermatoscopic image datasets. My dataset comprises 10,015 dermatoscopic images collected from various populations and acquired using different modalities (Over 50% of the lesions in the dataset are confirmed through histopathology), which I then divided evenly to separate training and test data. This dataset serves as an academic training set for machine learning purposes, encompassing representative cases of all significant diagnostic categories in pigmented lesions. 
+For my  project, I decided to utilize RevNet18 and image detection techniques to classify seven different types of skin cancer. The dataset I employed for this project is the HAM10000 ("Human Against Machine with 10000 training images") dataset extracted from Kaggle (See link below), which addresses the challenges posed by the small size and lack of diversity in available dermatoscopic image datasets. My dataset comprises 10,015 dermatoscopic images collected from various populations and acquired using different modalities (Over 50% of the lesions in the dataset are confirmed through histopathology), which I then divided evenly to separate training and test data. This dataset serves as an academic training set for machine learning purposes, encompassing representative cases of all significant diagnostic categories in pigmented lesions. 
 
 The seven types of skin cancer classified in this project are:
 1. Actinic keratoses and intraepithelial carcinoma / Bowen's disease (akiec)
